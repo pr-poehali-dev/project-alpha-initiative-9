@@ -3,40 +3,40 @@ import { Badge } from "@/components/ui/badge"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
+    title: "4K и 8K качество",
+    description: "Смотрите видео в максимальном разрешении без буферизации — адаптивный стриминг подстраивается под скорость интернета.",
+    icon: "target",
+    badge: "Ultra HD",
+  },
+  {
+    title: "Без рекламы",
+    description: "Никаких прерываний. Чистый просмотр любимого контента без навязчивых роликов и баннеров.",
+    icon: "lock",
+    badge: "Premium",
+  },
+  {
+    title: "Умные рекомендации",
+    description: "ИИ-алгоритм подбирает контент по вашим интересам с точностью 99,2% — вы всегда найдёте что посмотреть.",
     icon: "brain",
     badge: "ИИ",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
-  },
-  {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
-  },
-  {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
+    title: "Молниеносная загрузка",
+    description: "Загрузка видео начинается мгновенно — CDN-сеть из 200+ узлов по всему миру обеспечивает минимальную задержку.",
     icon: "zap",
-    badge: "Умный",
+    badge: "Быстро",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
+    title: "Совместный просмотр",
+    description: "Смотрите с друзьями и семьёй в реальном времени — синхронизированный плеер и чат в одном окне.",
     icon: "link",
-    badge: "Связь",
+    badge: "Вместе",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Все устройства",
+    description: "Телевизор, смартфон, планшет, ПК — бесшовный переход между устройствами с сохранением прогресса.",
+    icon: "globe",
+    badge: "Мультиплатформа",
   },
 ]
 
@@ -45,9 +45,9 @@ export function FeaturesSection() {
     <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Видео, каким оно должно быть</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            UltraTube — платформа нового поколения для тех, кто ценит качество
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export function FeaturesSection() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                    {feature.icon === "brain" && "🤖"}
+                    {feature.icon === "lock" && "🚫"}
+                    {feature.icon === "globe" && "📱"}
+                    {feature.icon === "zap" && "⚡"}
+                    {feature.icon === "link" && "👥"}
+                    {feature.icon === "target" && "🎬"}
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}

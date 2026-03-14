@@ -4,24 +4,24 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 const testimonials = [
   {
     name: "Елена Родригес",
-    role: "Директор по нейронауке, Quantum Dynamics",
+    role: "Блогер, 2.4M подписчиков",
     avatar: "/professional-woman-scientist.png",
     content:
-      "SynapseAI изменил наш подход к нейрореабилитации. Результаты пациентов улучшились на 340% после внедрения.",
+      "Перешла на UltraTube год назад — монетизация выросла в 3 раза, а аудитория стала куда активнее. Лучшая платформа для авторов.",
   },
   {
     name: "Маркус Уильямс",
-    role: "Руководитель исследований, Stellar Analytics",
+    role: "Режиссёр документального кино",
     avatar: "/cybersecurity-expert-man.jpg",
     content:
-      "Точность и протоколы безопасности не имеют аналогов. Мы значительно ускорили клинические испытания с платформой SynapseAI.",
+      "Наконец-то платформа, которая уважает авторов. Качество 8K, честные условия сотрудничества и реально живая аудитория.",
   },
   {
     name: "Анна Ковальски",
-    role: "Вице-президент по разработке, Nova Industries",
+    role: "Преподаватель онлайн-курсов",
     avatar: "/asian-woman-tech-developer.jpg",
     content:
-      "Интеграция прошла безупречно. Адаптивные алгоритмы понимают намерения пользователя лучше любой системы, что мы тестировали.",
+      "Мои студенты в восторге от качества видео и удобного интерфейса. UltraTube — лучшее что случилось с онлайн-образованием.",
   },
 ]
 
@@ -30,9 +30,9 @@ export function TestimonialsSection() {
     <section className="py-24 px-6 bg-card">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Нам доверяют лидеры</h2>
+          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Нам доверяют создатели</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Что говорят лидеры индустрии о нашей революционной технологии
+            Что говорят авторы и зрители о платформе UltraTube
           </p>
         </div>
 

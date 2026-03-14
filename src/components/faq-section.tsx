@@ -3,34 +3,34 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export function FAQSection() {
   const faqs = [
     {
-      question: "Насколько безопасна процедура SynapseAI?",
+      question: "UltraTube платный или бесплатный?",
       answer:
-        "Да, процедура выполняется прецизионным хирургическим роботом и прошла обширное тестирование. Все материалы биосовместимы и одобрены FDA для медицинского применения.",
+        "Базовый доступ к UltraTube полностью бесплатный. Премиум-подписка открывает контент 4K/8K, отключает рекламу и даёт доступ к эксклюзивным оригиналам.",
     },
     {
-      question: "Сколько длится операция?",
+      question: "На каких устройствах работает UltraTube?",
       answer:
-        "Малоинвазивная процедура обычно занимает 2-3 часа и проводится под местной анестезией с седацией.",
+        "UltraTube работает на смартфонах (iOS и Android), Smart TV, ПК, Mac, планшетах и игровых консолях. Прогресс просмотра синхронизируется между всеми устройствами.",
     },
     {
-      question: "Можно ли удалить устройство?",
+      question: "Можно ли смотреть видео без интернета?",
       answer:
-        "Да, SynapseAI разработан полностью обратимым. Устройство можно безопасно удалить при необходимости, хотя это требуется редко.",
+        "Да, премиум-подписчики могут скачивать видео для просмотра офлайн. Загруженный контент доступен в течение 30 дней.",
     },
     {
-      question: "Какие ощущения при использовании SynapseAI?",
+      question: "Как стать автором на UltraTube?",
       answer:
-        "Пользователи отмечают, что управление устройствами силой мысли ощущается естественно и интуитивно после короткого периода обучения. От самого импланта нет физических ощущений.",
+        "Регистрация канала бесплатная и занимает 2 минуты. Авторы получают доступ к инструментам аналитики, монетизации и продвижения с первого дня.",
     },
     {
-      question: "Как долго работает батарея?",
+      question: "Как работает монетизация для авторов?",
       answer:
-        "Устройство заряжается беспроводным способом и работает полный день на одном заряде. Зарядка выполняется внешним устройством, размещаемым рядом с головой.",
+        "Авторы получают 70% от доходов с рекламы на своих видео — один из лучших показателей в индустрии. Также доступны подписки, донаты и платный контент.",
     },
     {
-      question: "Кто может получить SynapseAI?",
+      question: "Есть ли родительский контроль?",
       answer:
-        "В настоящее время мы фокусируемся на людях с тяжелым параличом. Соответствие определяется через комплексную медицинскую оценку.",
+        "Да, в настройках аккаунта можно включить режим «Детский UltraTube» — отдельный безопасный раздел только с контентом для детей, без рекламы.",
     },
   ]
 
@@ -40,15 +40,15 @@ export function FAQSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-orbitron">Частые вопросы</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto font-space-mono">
-            Ответы на популярные вопросы о технологии SynapseAI, безопасности и опыте пациентов.
+            Ответы на популярные вопросы о платформе UltraTube, подписках и возможностях для авторов.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-red-500/20 mb-4">
-                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-red-400 font-orbitron px-6 py-4">
+              <AccordionItem key={index} value={`item-${index}`} className="border-blue-500/20 mb-4">
+                <AccordionTrigger className="text-left text-lg font-semibold text-white hover:text-blue-400 font-orbitron px-6 py-4">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-300 leading-relaxed px-6 pb-4 font-space-mono">

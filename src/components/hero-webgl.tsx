@@ -32,7 +32,6 @@ const Scene = () => {
       uniform float uTime;
       varying vec2 vUv;
 
-      // Simple noise function
       float random(vec2 st) {
         return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
       }
@@ -51,15 +50,12 @@ const Scene = () => {
       void main() {
         vec2 uv = vUv;
 
-        // Depth-based displacement
         float depth = texture2D(uDepthMap, uv).r;
         vec2 displacement = depth * uPointer * 0.01;
         vec2 distortedUv = uv + displacement;
 
-        // Base texture
         vec4 baseColor = texture2D(uTexture, distortedUv);
 
-        // Create scanning effect
         float aspect = ${WIDTH}.0 / ${HEIGHT}.0;
         vec2 tUv = vec2(uv.x * aspect, uv.y);
         vec2 tiling = vec2(120.0);
@@ -69,13 +65,10 @@ const Scene = () => {
         float dist = length(tiledUv);
         float dot = smoothstep(0.5, 0.49, dist) * brightness;
 
-        // Flow effect based on progress
         float flow = 1.0 - smoothstep(0.0, 0.02, abs(depth - uProgress));
 
-        // Red scanning overlay
-        vec3 mask = vec3(dot * flow * 10.0, 0.0, 0.0);
+        vec3 mask = vec3(0.0, 0.3, dot * flow * 10.0);
 
-        // Combine effects
         vec3 final = baseColor.rgb + mask;
 
         gl_FragColor = vec4(final, 1.0);
@@ -114,8 +107,8 @@ const Scene = () => {
 }
 
 export const Hero3DWebGL = () => {
-  const titleWords = "Synapse AI".split(" ")
-  const subtitle = "Нейроинтерфейсы нового поколения."
+  const titleWords = "Ultra Tube".split(" ")
+  const subtitle = "Видео нового поколения — без ограничений."
   const [visibleWords, setVisibleWords] = useState(0)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
   const [delays, setDelays] = useState<number[]>([])
@@ -147,7 +140,7 @@ export const Hero3DWebGL = () => {
 
       <div className="h-screen uppercase items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
         <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron">
-          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white">
+          <div className="flex space-x-2 lg:space-x-6 overflow-hidden">
             {titleWords.map((word, index) => (
               <div
                 key={index}
@@ -155,6 +148,7 @@ export const Hero3DWebGL = () => {
                 style={{
                   animationDelay: `${index * 0.13 + (delays[index] || 0)}s`,
                   opacity: index < visibleWords ? undefined : 0,
+                  color: index === 0 ? "#ffffff" : "#3b82f6",
                 }}
               >
                 {word}
